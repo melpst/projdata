@@ -1,6 +1,6 @@
 function searchDis(dis) {
-    console.log("text: " + dis);
-    $('#hos').load('text.php?dis=' + dis);
+    console.log("mysql: " + dis);
+    $('#hos').load('mysql.php?dis=' + dis);
 }
 
 (function ($) {
