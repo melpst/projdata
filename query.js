@@ -1,3 +1,7 @@
+function searchAll() {
+    $('#hos').load('allHos.php?');
+}
+
 function searchDist(dis) {
     console.log("searchByDist: " + dis);
     $('#hos').load('searchByDist.php?dis=' + dis);
@@ -12,7 +16,7 @@ function searchProv(pro) {
     console.log("searchByProv: " + pro);
     $('#hos').load('searchByProv.php?pro=' + pro);
 }
-
+ 
 function searchinProv(hip) {
     console.log("searchByinProv: " + hip);
     $('#hos').load('searchByinProv.php?hip=' + hip);
@@ -28,16 +32,14 @@ function searchinOrg(hio) {
     $('#hos').load('searchByinOrg.php?hio=' + hio);
 }
 
+function searchSec(sec) {
+    console.log("searchBySec: " + sec);
+    $('#hos').load('searchBySec.php?sec=' + sec);
+}
 
 function searchinSec(his) {
     console.log("searchByinSec: " + his);
     $('#hos').load('searchByinSec.php?his=' + his);
-}
- 
-
-function searchSec(sec) {
-    console.log("searchBySec: " + sec);
-    $('#hos').load('searchBySec.php?sec=' + sec);
 }
 
 function searchType(type) {
@@ -45,9 +47,14 @@ function searchType(type) {
     $('#hos').load('searchByType.php?type=' + type);
 }
 
-function searchAll() {
-    $('#hos').load('allHos.php?');
-}
+
+
+
+
+
+
+
+
 
 (function ($) {
    $(document);
