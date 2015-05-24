@@ -1,47 +1,31 @@
-<div class="row">
+<table style="width:100%">
+<?
 
-<?php
     include("sqlfunc.php");
-    $name = $_GET['name'];
-    search_coffee_name($name, "ASC");
-  
-    function search_coffee_name($keyword, $order)
+    $dis = $_GET['dis'];
+    search_hos_from_district($dis);
+
+    function search_hos_from_district($keyword) {
+      $keyword = strtolower($keyword);
+      $sql = 'select * from hospital
+            where district like "%%"';
+      $result = select($sql);
+  ?>
+  <tr>
+    <td><strong><? echo "hosId"; ?></strong></td>
+    <td><strong><? echo "hosName"; ?></strong></td>
+    <td><strong><? echo "district"; ?></strong></td>
+  </tr>
+  <?
+    while($row = mysql_fetch_array($result))
     {
-        $keyword = strtolower($keyword);
-        $sql = "SELECT * 
-                FROM Coffee
-                WHERE lower(name) LIKE '%$keyword%'
-                ORDER BY name $order, rating $order";
-        //echo $sql;
-        $result = select($sql);
-        $row = mysql_num_rows($result);
-        //echo "<br>row : "$row."<br>";
-        while($row = mysql_fetch_array($result))
-        {
+  ?>
+    <tr>
+      <td><? echo $row['hosId']; ?></td>
+      <td><? echo $row['hosName']; ?></td>
+      <td><? echo $row['district']; ?></td>
+    </tr>
+  <? }
+  }
 ?>
-
-
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail hvr-grow-shadow">
-        <? echo "<img src=\"./img/coffee/".$row['pic']."\">"; ?>
-        <!-- <img src="./img/18.jpg"> -->
-        <div class="caption">
-            <? echo "<h4>".$row['name']."</h4>"; ?>
-            <!-- <h4>Chocolate-y Iced Mocha</h4> -->
-        </div>
-        <div class="ratings"><p>
-            <?
-            for ($i = 1; $i <= $row['rating']; $i++) {
-                echo "<span class=\"fa fa-heart good\"></span> ";
-            }
-            for ($i <= $row['rating'] + 1; $i <= 5; $i++) {
-                echo "<span class=\"fa fa-heart-o bad\"></span> ";
-            }
-            ?>
-        </p></div>
-    </div>
-</div>
-
-<? } } ?>
-
-</div>
+</table>
