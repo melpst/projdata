@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $type = $_GET['type'];
+    $type = $_GET['find'];
     search_hos_from_type($type);
 
     function search_hos_from_type($keyword) {

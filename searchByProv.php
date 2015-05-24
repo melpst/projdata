@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $pro = $_GET['pro'];
+    $pro = $_GET['find'];
     search_hos_from_province($pro);
 
     function search_hos_from_province($keyword) {

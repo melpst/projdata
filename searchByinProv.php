@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $hip = $_GET['hip'];
+    $hip = $_GET['find'];
     search_hos_from_inProv($hip);
 
     function search_hos_from_inProv($keyword) {

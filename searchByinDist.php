@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $hid = $_GET['hid'];
+    $hid = $_GET['find'];
     search_hos_from_inDist($hid);
 
     function search_hos_from_inDist($keyword) {

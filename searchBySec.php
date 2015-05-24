@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $sec = $_GET['sec'];
+    $sec = $_GET['find'];
     search_hos_from_section($sec);
 
     function search_hos_from_section($keyword) {

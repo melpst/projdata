@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $org = $_GET['org'];
+    $org = $_GET['find'];
     search_hos_from_organization($org);
 
     function search_hos_from_organization($keyword) {

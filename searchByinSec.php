@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $his = $_GET['his'];
+    $his = $_GET['find'];
     search_hos_from_inSec($his);
 
     function search_hos_from_inSec($keyword) {

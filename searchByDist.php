@@ -1,7 +1,7 @@
 <table>
 <?
     include("sqlfunc.php");
-    $dis = $_GET['dis'];
+    $dis = $_GET['find'];
     search_hos_from_district($dis);
 
     function search_hos_from_district($keyword) {
