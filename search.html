@@ -75,39 +75,48 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 
                 <br>
-                <select name="mydropdown">
-                    <option value="Milk">Fresh Milk</option>
-                    <option value="Cheese">Old Cheese</option>
-                    <option value="Bread">Hot Bread</option>
+    
+                แสดง รพ. ค้นหาด้วย
+                <select NAME="type1" id="select1">
+                    <option VALUE="All">ทุกรพ.</option>
+                    <option VALUE="Dist">เขต</option>
+                    <option VALUE="inDist">รพ.ในเขต</option>
+                    <option VALUE="Prov">จังหวัด</option>
+                    <option VALUE="inProv">รพ.ในจังหวัด</option>
+                    <option VALUE="Org">เครือ</option>
+                    <option VALUE="inOrg">รพ.ในเครือ</option>
+                    <option VALUE="Sec">แผนกที่มี</option>
+                    <option VALUE="Type">รัฐ/เอกชน</option>
                 </select>
+                <input type="text" name="find" id="textin"/>
+                <input type="hidden" name="searching" value="yes" />
+                <button class="btn btn-info" onclick="searching()">ค้นหา</button><br>
+
+                แสดงแผนก ค้นหาด้วย รพ. 
+                <input type="text" name="find" id="textin2"/>
+                <input type="hidden" name="searching" value="yes" />
+                <button class="btn btn-info" onclick="searching2()">ค้นหา</button><br>
                 <br>
-                <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-                    <textarea name="myTextBox" style="background-color:#FCF5D8;color:#AD8C08;">Searching for..</textarea>
-                </form>
                 <br>
-                <form>
-                    <input type="button" value="Submit" onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />
-                </form>
-                <br>
-                <!-- PUSH CODE HERE -->
-                <a href="#" onclick="searchAll()">ทุกรพ.</a><br>
-                <a href="#" onclick="searchDist('บาง')">หาจากเขต</a><br>
-                <a href="#" onclick="searchinDist('กรุงเทพคริสเตียน')">หาจากรพ.ในเขต</a><br>
-                <a href="#" onclick="searchProv('กรุงเทพมหานคร')">หาจากจังหวัด</a><br>
-                <a href="#" onclick="searchinProv('ห้วยพลู')">หาจากรพ.ในจังหวัด</a><br>
-                <a href="#" onclick="searchOrg('กรม')">หาจากเครือ</a><br>
-                <a href="#" onclick="searchinOrg('ราช')">หาจากรพ.ในเครือ</a><br>
-                <a href="#" onclick="searchSec('หู')">หาจากแผนก</a><br>
-                <a href="#" onclick="searchinSec('ห้วยพลู')">หาจากรพ.ที่มีแผนก</a><br>
-                <a href="#" onclick="searchType('รัฐ')">หาจากรัฐ/เอกชน</a><br>
+    
+    <!-- 
+                <a href="#" id="all"    onclick="searchAll()">ทุกรพ.</a><br>
+                <a href="#" id="dist"   onclick="searchDist('บาง')">หาจากเขต</a><br>
+                <a href="#" id="inDist" onclick="searchinDist('กรุงเทพคริสเตียน')">หาจากรพ.ในเขต</a><br>
+                <a href="#" id="prov"   onclick="searchProv('กรุงเทพมหานคร')">หาจากจังหวัด</a><br>
+                <a href="#" id="inProv" onclick="searchinProv('ห้วยพลู')">หาจากรพ.ในจังหวัด</a><br>
+                <a href="#" id="org"    onclick="searchOrg('กรม')">หาจากเครือ</a><br>
+                <a href="#" id="inOrg"  onclick="searchinOrg('ราช')">หาจากรพ.ในเครือ</a><br>
+                <a href="#" id="sec"    onclick="searchSec('หู')">หาจากแผนก</a><br>
+                <a href="#" id="inSec"  onclick="searchinSec('ห้วยพลู')">หาจากรพ.ที่มีแผนก</a><br>
+                <a href="#" id="type"   onclick="searchType('รัฐ')">หาจากรัฐ/เอกชน</a><br> -->
                 
                 <div class="table show" id="hos"></div>
 
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
-    </nav>    <!-- /.container -->
+    </nav>
+
 
     <footer>
         <div class="container">

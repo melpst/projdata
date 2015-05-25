@@ -1,4 +1,4 @@
-function searchAll() {
+/*function searchAll() {
     $('#hos').load('allHos.php?');
 }
 
@@ -46,10 +46,27 @@ function searchType(type) {
     console.log("searchByType: " + type);
     $('#hos').load('searchByType.php?type=' + type);
 }
+*/
+ 
 
+function searching() {
+    text = $('#textin').val();
+    option = $('#select1').val();
+    if (option != "All") {
+        url = "searchBy"+option+".php?find="+text;
+        console.log(url);
+    }
+    else {
+        url = "allHos.php?";
+    }
+    $('#hos').load(url);   
 
+}
 
-
+function searching2() {
+    text = $('#textin2').val();
+    $('#hos').load('searchByinSec.php?find=' + text);
+}
 
 
 
