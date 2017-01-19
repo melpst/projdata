@@ -1,23 +1,14 @@
-รายชื่อผู้จัดทำ
--จิตรลดา	สุปรียาพร		รหัสนิสิต	5610503841
--เบญจรัตน์	ศรีเพ็ชรดานนท์	รหัสนิสิต	5610503906
--ภัทรพร	ตุลาธรรม		รหัสนิสิต	5610503931
+Contributors
+- Jitlada Supreeyaporn 	  5610503841
+- Benjarut Sripetchdanon	5610503906
+- Pattaraporn Tulathum    5610503931
 
-รายละเอียดไฟล์ต่างๆ
--projdata.zip		รวมไฟล์html, css, php, js, etc.ที่ใช้งานภายในเว็บ
--zp9004_projdata.sql	ไฟล์databaseที่ใช้งานในเว็บ
+Files
+-projdata.zip		      zipped files wrote in html, css, php, js, etc.
+-zp9004_projdata.sql	database file
 
-url website: http://www.zp9004.tld.122.155.177.82.no-domain.name/index.html
-
-การใช้งาน
--เข้าหน้าเว็บไซต์ข้างต้น กดเข้าหน้า"ค้นหาทันใจ"
--ค้นหาข้อมูลที่ต้องการ
-
-toolที่ใช้ในการทำงาน
--FileZilla			อัพไฟล์ต่างๆขึ้นสู่เซิฟเวอร์
--phpMyAdmin			สร้าง, แก้ไข, ลบ, กระบวนการอื่นๆ ที่เกี่ยวข้องกับdatabase
--sublime			ใช้เขียนโค้ดต่างๆ
--google SearchEngine		หาความรู้และตัวอย่างโค้ด
--googleDoc			ใช้เขียนเล่มรายงาน
--googleDrive			ส่งข้อมูลต่างๆหากันภายในกลุ่ม
--trello				วางแผน แบ่งหน้าที่ ลงรายละเอียดและความเป็นไปของงาน
+Tools
+-FileZilla			using for uploading files to server
+-phpMyAdmin			using for accessing database
+-sublime			  text editor
+-trello				  using for updating progress
